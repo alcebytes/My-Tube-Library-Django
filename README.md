@@ -6,8 +6,8 @@ Devido a eu ser inscrito em muitos canais do YouTube, e existirem muitas playlis
 
 Além de suprir a necessidade de organização e acesso rápido a biblioteca, este sistema serviu também para colocar em prática meus conhecimentos em Python, Django, HTML e CSS
 
-Atenção: Para esconder valores sensiveis no arquivo settings.py, tais como direções e senhas utilizo Python Decouple.
-Instruções em https://pypi.org/project/python-decouple/
+Atenção: Para esconder valores sensiveis no arquivo settings.py, tais como direções e senhas utilizo Python Decouple.  
+Instruções em https://pypi.org/project/python-decouple/  
 No repositório, mude o nome do arquivo '.env.example' para '.env' e faça as alterações necessárias com os seus dados.
 
 Attention: To hide sensitive values in the settings.py file, such as directions and passwords, I use Python Decouple.
