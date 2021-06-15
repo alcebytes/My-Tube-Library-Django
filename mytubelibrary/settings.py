@@ -231,9 +231,9 @@ if not DEBUG:
     # EMAIL_USER_SSL = True
     EMAIL_USER_TLS = True
     EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-    DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+    # DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
     # DEFAULT_FROM_EMAIL = "António <ansistemassites@gmail.com>"
-    
+    DEFAULT_FROM_EMAIL = 'default from email'
     ADMINS = [(config('SUPER_USER'), config('EMAIL'))]
     MANAGERS = ADMINS
 
