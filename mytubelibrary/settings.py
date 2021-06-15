@@ -224,14 +224,16 @@ if DEBUG:
 
 # --- Production --- #
 if not DEBUG:
+    EMAIL_BACKEND= "django.core.mail.backends.smtp.EmailBackend"
     EMAIL_HOST = config('EMAIL_HOST')
     EMAIL_HOST_USER = config('EMAIL_HOST_USER')
     EMAIL_PORT = config('EMAIL_PORT', cast=int)
     # EMAIL_USER_SSL = True
     EMAIL_USER_TLS = True
     EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-    # DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
-    DEFAULT_FROM_EMAIL = "António <ansistemassites@gmail.com>"
+    DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+    # DEFAULT_FROM_EMAIL = "António <ansistemassites@gmail.com>"
+    
     ADMINS = [(config('SUPER_USER'), config('EMAIL'))]
     MANAGERS = ADMINS
 
