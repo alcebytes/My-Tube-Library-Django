@@ -73,6 +73,11 @@ INSTALLED_APPS = [
     'django_cleanup.apps.CleanupConfig',
 ]
 
+# --- Only for use whit Cloudinary media files storage --- #
+if not DEBUG:
+    INSTALLED_APPS[7:7] = 'cloudinary_storage', 'cloudinary'
+    
+
 # ----------------------------------------------------------
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -211,8 +216,17 @@ if not DEBUG:
     # MEDIA_ROOT = config('MEDIA_ROOT')
 
     # --- For Heroku --- #
-    STATIC_ROOT = BASE_DIR / 'staticfiles'
-    MEDIA_ROOT = BASE_DIR / 'media'
+    # STATIC_ROOT = BASE_DIR / 'staticfiles'
+    # MEDIA_ROOT = BASE_DIR / 'media'
+
+    # --- Only for use whit Cloudinary media files storage --- #
+    CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': config('CLOUD_NAME'),
+        'API_KEY': config('API_KEY'),
+        'API_SECRET': config('API_SECRET')
+    }
+
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # ----------------------------------------------------------
