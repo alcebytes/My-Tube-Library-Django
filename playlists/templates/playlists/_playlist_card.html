@@ -5,7 +5,7 @@
     <section class="6u border rounded shadow-sm p-3">
 
         <a href="{% url 'playlist-detail' playlist.pk %}" class="custom-a">
-            <img class="imagem-playlist" src="/media/{{ playlist.playlist_foto }}" alt="{{ playlist.playlist_nome }}">
+            <img class="imagem-playlist" src="{{ playlist.playlist_foto.url }}" alt="{{ playlist.playlist_nome }}">
             <header>
                 <h2 class="custom-text">{{ playlist.playlist_nome}}</h2>
             </header>
